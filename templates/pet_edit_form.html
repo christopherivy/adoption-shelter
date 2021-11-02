@@ -1,0 +1,22 @@
+<!-- extends base.html -->
+{% extends 'base.html'%}
+
+<!-- title of this page -->
+{% block title%} Edit a Pet Form {% endblock%}
+
+<!-- content below -->
+{% block content %}
+
+<h1>{{pet.name}} </h1>
+{% if pet.photo_url %}
+<img src="{{pet.photo_url}} " alt="" class="img-fluid"> {% endif %}
+
+<h2>Update your Pet</h2>
+
+<form action="" method="POST">
+    {% include 'form.html' %}
+    <button class="btn btn-primary" type="submit">Update</button>
+</form>
+
+
+{% endblock %}
